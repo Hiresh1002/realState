@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block container %}
+<div class="Signup">
+    <h1>SIGN UP</h1>
+
+<form action="" method="post" class="form">
+    {% csrf_token %}
+    <input type="text" name="fnm" placeholder="Enter First Name" required><br>
+    <input type="text" name="lnm" placeholder="Enter Last Name" required><br>
+    <input type="email" name="email" placeholder="Enter Email" required><br>
+    <input type="password" name="pwd" placeholder="Enter Password" required><br>
+    <input type="submit" value="Sign Up">
+</form><br><br><br><br>
+</div>
+{% endblock %}

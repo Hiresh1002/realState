@@ -1,0 +1,225 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.nav{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.719);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+padding: 10px;
+position:fixed;
+top: -10px;
+border-bottom: 2px solid rgb(187, 183, 183);
+font-size: 20px;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+    gap: 23px;
+    align-items: center;
+}
+.nav ul li a{
+    color: black;
+    text-decoration: none;
+
+}
+.logo img{
+    width:100px;
+    height:80px;
+}
+img{
+width: 1500px;
+
+}
+.head{
+    top: 380px;
+    width: 580px;
+    padding: 25px;
+position: absolute;
+font-size: 30px;
+color: aliceblue;
+background-color: #1615159e;
+border-top-right-radius: 50px;
+
+}
+.head p{
+    font-size: 20px;
+}
+.head span{
+    
+}
+/* Home page Style */
+
+.head2{
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+.p2{
+    top: 30px;
+    position: relative;
+    left: 350px;
+    width: 750px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.video{
+margin-left: 70px;
+padding-top: 90px;
+}
+
+.brand img{
+    width: 200px;
+text-align: center;
+
+}
+.proj img{
+object-fit: scale-down;
+
+}
+.foot{
+   width: 100%;
+   border-top: 2px solid white;
+display: flex;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    gap: 80px;
+    position: relative;
+    margin-top: 150px;
+    
+}
+.f1,.f2,.f3{
+    width: 200px;
+    position: relative;
+    left: 40px;
+
+}
+.f2 p,.f3 p{
+    width: 280px;
+    line-height: 25px;
+
+}
+.f2{
+
+
+}
+.f1 li{
+    width: 200px;
+    line-height: 25px;
+    flex-direction: column;
+    list-style: none;
+    }
+
+.foot img{
+    width: 200px;
+    height: 150px;
+}
+/* Signup page Start */
+.Signup{
+position: relative;
+top: 150px;
+text-align: center;
+}
+
+
+
+.form{
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 520px;
+  }
+
+  
+
+  .form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  
+
+  .form{
+    width: 100%;
+    padding: 12px;
+    background: #000000;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .form ::placeholder{
+    color: rgb(0, 0, 0);
+  }
+
+
+  /* .form input:hover {
+    background: #000000;
+    color: #fff;
+  } */
+/* Login page style */
+.login{
+    background-color: #111;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 570px;
+
+}
+
+
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: #fff;
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login input:hover {
+    background-color: #ccc;
+}
+
+/* .{
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+} */
+
+/* .login-container .signup-link a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login-container .signup-link a:hover {
+    color: #ccc;
+} */

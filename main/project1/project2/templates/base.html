@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static "css/Style.css" %}">
+</head>
+<body>
+
+    {% block navbar %}
+    <nav class="nav">
+        <div class="logo"> <img src="{% static '/images/logo.png' %}" alt="">
+        </div>    
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'Gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'Services' %}">Services</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'Contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+
+
+            
+        </ul>
+    </nav> 
+    {% endblock %}
+
+    {% block container %}
+    {% endblock %}
+
+    {% block footer %}
+
+    <footer class="foot">
+        <img src="{% static '/images/logo1 white.png' %}" alt="">
+<div class="f1"><h1>Our Company</h1>
+<li>Home</li>
+<li>Gallery</li>
+<li>Services</li>
+<li>About</li>
+<li>Contact Us</li>
+
+</div>
+<div class="f2"><h1>Our Services</h1>
+<p>Residential Construction
+    Architectural & Interior Design
+    Landscape Design
+    Site Planning</p></div>
+<div class="f3"><h1>ContactUs</h1>
+<p>77, behind BCM Height, opposite Chinmay Sagar Gurukul, Suman Nagar, Indore,
+     Madhya Pradesh 452010</p>
+     <i class="fa-solid fa-envelope"></i>
+     <i class="fa-brands fa-facebook"></i>
+     <i class="fa-brands fa-whatsapp"></i>
+     <i class="fa-brands fa-instagram"></i>
+     <i class="fa-brands fa-twitter"></i>
+    
+    
+    </div>
+
+    </footer>
+</body>
+</html>
+{% endblock %}
