@@ -53,3 +53,7 @@ def login(request):
     return render(request, "login.html")
 
 
+def user_profile(request):
+    email=request.session["pro_data"]
+    data=Student.objects.get(email=email)
+    return render(request,'profile.html',{'key':data})
