@@ -56,4 +56,14 @@ def login(request):
 def user_profile(request):
     email=request.session["pro_data"]
     data=Student.objects.get(email=email)
+    
     return render(request,'profile.html',{'key':data})
+
+
+def user_delete(request):
+    return HttpResponse("delete")
+
+def user_update(request):
+    return HttpResponse("update")
+def user_logout(request):
+    return HttpResponse("logout")
