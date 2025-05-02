@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block container %}
-  <h1>updagted here</h1>
+  <h1>updagted here</h1> <br><br><br>
   <form action="" method="post" class="form">
     {% csrf_token %}
     <input type="text" name="fnm" placeholder="Enter First Name" required><br>
     <input type="text" name="lnm" placeholder="Enter Last Name" required><br>
-    <input type="email" name="email" placeholder="Enter Email" required><br>
+    <input type="email" name="email" placeholder="Enter Email" required readonly><br>
     <input type="password" name="pwd" placeholder="Enter Password" required><br>
     <input type="submit" value="Sign Up">
 </form><br><br><br><br>

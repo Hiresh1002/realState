@@ -2,20 +2,17 @@
 {% load static %}
 
 {% block container %}
-
+<div class="profile"> 
 <h1>Your profile</h1>
-{% for i in key  %}
+
 <h1>Your ID: {{ key.id }}</h1>
-<h1>Your ID: {{ key.fnm }}</h1>
+<h1>Your First Name: {{ key.fnm }}</h1>
+<h1>Your Last Name: {{ key.lnm }}</h1>
+<h1>Your Email: {{ key.email }}</h1>
+<h1>Your Password:{{ key.password }}</h1>
 
-<h1>Your ID: {{ key.lnm }}</h1>
-<h1>Your ID: {{ key.email }}</h1>
-
-<h1>Your ID: {{ key.password }}</h1>
-
-<button><a href="{% url "user_update" %}">UPDATE</a></button>
-<button><a href="{% url "user_delete" %}">DELETE</a></button>
-<button><a href="{% url "user_logout" %}">LOGOUT</a></button>
-
-{% endfor %}
+<button><a href="{% url 'user_update' key.id %}">UPDATE</a></button>
+<button><a href="{% url 'user_delete' key.id %}">DELETE</a></button>
+<button><a href="{% url 'user_logout' %}">LOGOUT</a></button>
+</div>
 {% endblock %}
