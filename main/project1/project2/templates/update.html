@@ -7,7 +7,7 @@
     {% csrf_token %}
     <input type="text" name="fnm" placeholder="Enter First Name" value={{ key.fnm }}><br>
     <input type="text" name="lnm" placeholder="Enter Last Name"value={{ key.lnm }} ><br>
-    <input type="email" name="email" placeholder="Enter Email" value={{ key.email }}required readonly><br>
+    <input type="email" name="email" placeholder="Enter Email" value={{ key.email }}   required readonly><br>
     <input type="password" name="pwd" placeholder="Enter Password"value={{ key.password}} ><br>
     <input type="submit" value="update">
 </form><br><br><br><br>
