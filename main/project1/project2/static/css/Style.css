@@ -10,7 +10,7 @@
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
-padding: 10px;
+/* padding: 10px; */
 position:fixed;
 top: -10px;
 border-bottom: 2px solid rgb(187, 183, 183);
@@ -29,7 +29,7 @@ font-size: 20px;
 }
 .logo img{
     width:100px;
-    height:80px;
+    height:50px;
 }
 img{
 width: 1500px;

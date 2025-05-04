@@ -1,14 +1,49 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block container %}
-  <h1>updagted here</h1> <br><br><br>
-  <form action="" method="post" class="form">
+  <h1>Updated Here</h1><br><br><br>
+
+  <form id="updateForm" action="" method="post" class="form">
     {% csrf_token %}
-    <input type="text" name="fnm" placeholder="Enter First Name" value={{ key.fnm }}><br>
-    <input type="text" name="lnm" placeholder="Enter Last Name"value={{ key.lnm }} ><br>
-    <input type="email" name="email" placeholder="Enter Email" value={{ key.email }}   required readonly><br>
-    <input type="password" name="pwd" placeholder="Enter Password"value={{ key.password}} ><br>
-    <input type="submit" value="update">
-</form><br><br><br><br>
+    <input type="text" name="fnm" placeholder="Enter First Name" value="{{ key.fnm }}"><br>
+    <input type="text" name="lnm" placeholder="Enter Last Name" value="{{ key.lnm }}"><br>
+    <input type="email" name="email" placeholder="Enter Email" value="{{ key.email }}" required readonly><br>
+    <input type="password" name="pwd" placeholder="Enter Password" value="{{ key.password }}"><br>
+    <input type="submit" value="Update">
+  </form><br><br><br><br>
+
+  <!-- Include SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Handle form submission -->
+  <script>
+    document.getElementById('updateForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent the form from submitting immediately
+
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "Do you want to update your information?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, update it!',
+        cancelButtonText: 'Cancel'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Optionally show a success message before submitting
+          Swal.fire({
+            title: 'Updated!',
+            text: 'Your information has been updated.',
+            icon: 'success',
+            timer: 1500,
+            showConfirmButton: false
+          });
+
+          // Submit the form after a short delay to show the success message
+          setTimeout(() => {
+            e.target.submit();
+          }, 1600); // Wait a bit more than the SweetAlert timer
+        }
+      });
+    });
+  </script>
 {% endblock %}
