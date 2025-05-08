@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block container %}
+
+<form action="post" encrypt="multipart/form-date">
+{%csrf_token%}
+<label for="pic"> profile image:</label>
+<input type="file" name="pic" id="pic">
+<button type="submit">Update Profile</button>
+
+</form>
+
+</div>
+{% endblock %}

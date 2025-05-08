@@ -8,3 +8,20 @@ class Student(models.Model):
 
     def __str__(self):
         return self.fnm
+   
+def __str__(self):
+        return self.email
+class Userprofile(models.Model):
+    fkey=models.OneToOneField(to=Student,on_delete=models.CASCADE)
+    image=models.ImageField(upload_to="images/",null=True,blank=True)
+   
+def __str__(self):
+        return f"profile of {self.fkey.email}"
+   
+   
+   
+   
+   
+   
+   
+   
