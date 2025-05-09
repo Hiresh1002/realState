@@ -3,13 +3,12 @@
 
 {% block container %}
 
-<form action="post" encrypt="multipart/form-date">
-{%csrf_token%}
-<label for="pic"> profile image:</label>
-<input type="file" name="pic" id="pic">
-<button type="submit">Update Profile</button>
-
+<br><br><br><br><br>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="pic">Profile image:</label>
+    <input type="file" name="pic" id="pic">
+    <button type="submit">Update Profile</button>
 </form>
 
-</div>
 {% endblock %}

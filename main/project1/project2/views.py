@@ -82,3 +82,14 @@ def user_delete(request,id):
 def user_logout(request):
     del request.session['pro_data']
     return redirect("/login")
+def update_profile(request):
+    if request.method=="POST":
+        email =request.session["pro_data"]
+        student=Student.objects.get(email=email)
+        pic =request.FILES.get("pic")
+        profile,create = UserProfile.objects.get_or_create(fkey=student)
+        if pic:
+            profile.image=pic
+            profile.save()
+        return redirect("user_profile")
+    return render(request,'Proupdate.html')

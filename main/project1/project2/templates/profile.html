@@ -12,6 +12,8 @@
 <h1>Your Password:{{ key.password }}</h1>
 
 <button><a href="{% url 'user_update' key.id %}">UPDATE</a></button>
+<button><a href="{% url 'update_profile' %}">Update image</a></button>
+
 <button><a href="{% url 'user_delete' key.id %}">DELETE</a></button>
 <button><a href="{% url 'user_logout' %}">LOGOUT</a></button>
 </div>
