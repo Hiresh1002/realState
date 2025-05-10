@@ -10,6 +10,10 @@
 <h1>Your Last Name: {{ key.lnm }}</h1>
 <h1>Your Email: {{ key.email }}</h1>
 <h1>Your Password:{{ key.password }}</h1>
+{% for i in pic %}
+{{i.image.url}}
+<img src="{{i.image.url}}" alt="">
+{% endfor %}
 
 <button><a href="{% url 'user_update' key.id %}">UPDATE</a></button>
 <button><a href="{% url 'update_profile' %}">Update image</a></button>
