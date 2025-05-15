@@ -1,10 +1,10 @@
-from django import form
+from django import forms
 from . models import Book
 
-class BookForm(form.ModelForm):
+class BookForm(forms.ModelForm):
     class Meta:
         model = Book
         fields = ['title', 'author']
         widgets = {
-            'author': form.CheckboxSelectMultiple()
+            'author': forms.CheckboxSelectMultiple()
         }
