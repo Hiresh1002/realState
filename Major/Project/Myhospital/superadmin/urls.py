@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import SuperadminloginView  
 
 urlpatterns = [
-    path("",views.superadmin)
+    path('superlogin/', SuperadminloginView.as_view(), name='superadmin-login'),
 ]
